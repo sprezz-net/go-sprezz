@@ -1,0 +1,13 @@
+app:
+  debug: true
+modules:
+  log:
+    level: debug
+    output: console
+  trace:
+    processor:
+      type: otlp-grpc
+      options:
+        host: sprezz-jaeger:4317
+    sampler:
+      type: always-on
